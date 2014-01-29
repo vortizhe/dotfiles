@@ -1,0 +1,9 @@
+.DS_Store
+.svn
+.rvmrc
+*~
+\#*#
+.powrc
+.jshintrc
+*/environments/development.rb
+*.sublime*
