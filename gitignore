@@ -7,3 +7,4 @@
 .jshintrc
 */environments/development.rb
 *.sublime*
+restart.txt
