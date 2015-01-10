@@ -8,3 +8,4 @@
 */environments/development.rb
 *.sublime*
 restart.txt
+.rake_tasks
