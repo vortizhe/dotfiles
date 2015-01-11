@@ -1,6 +1,6 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
-ZSH_CUSTOM=~/.zsh-custom/
+ZSH_CUSTOM=~/.zsh-custom/plugins
 ZSH_THEME=""
 DISABLE_AUTO_UPDATE="true"
 COMPLETION_WAITING_DOTS="true"
