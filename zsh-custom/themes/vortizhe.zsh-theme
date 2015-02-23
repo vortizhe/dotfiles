@@ -16,6 +16,13 @@ else
 fi
 local return_code='%(?..%{$fg[red]%}%? ↵%{$reset_color%})'
 
+
+if [[ -x `which tacoma` ]]; then
+  tacoma='‹%{$fg[yellow]%}$(/usr/bin/env tacoma current )%{$reset_color%}›'
+else
+  tacoma=''
+fi
+
 git_prompt='%{$fg[blue]%}%~%{$reset_color%} $(git_prompt_info)$(git_prompt_status)%{$reset_color%}'
 
 PROMPT="$git_prompt
@@ -29,7 +36,7 @@ ZSH_THEME_GIT_PROMPT_CLEAN=""
 # display exitcode on the right when >
 
 
-RPROMPT="$rvm"
+RPROMPT="$tacoma$rvm"
 
 ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[green]% ✚"
 ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg[blue]%} ✹"
