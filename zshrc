@@ -5,7 +5,7 @@ ZSH_THEME="vortizhe"
 DISABLE_AUTO_UPDATE="true"
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(git rails brew gem osx rvm bundler cap powder rake rake-fast sublime heroku capistrano common-aliases zsh_reload tacoma c deploya)
+plugins=(git rails brew gem osx rvm bundler cap powder rake rake-fast sublime heroku capistrano common-aliases zsh_reload tacoma c deploya zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
