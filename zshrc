@@ -1,19 +1,16 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
-ZSH_CUSTOM=~/.zsh-custom/plugins
-ZSH_THEME=""
+ZSH_CUSTOM=$HOME/.zsh-custom/
+ZSH_THEME="vortizhe"
 DISABLE_AUTO_UPDATE="true"
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(git rails brew gem osx rvm bundler cap powder rake rake-fast sublime heroku capistrano common-aliases zsh_reload)
+plugins=(git rails brew gem osx rvm bundler cap powder rake rake-fast sublime heroku capistrano common-aliases zsh_reload tacoma c deploya)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 source ~/.localrc
-
-# My theme
-source ~/.zsh-custom/themes/vortizhe.zsh-theme
 
 # git
 alias gP='git push origin $(current_branch)'
