@@ -1,4 +1,4 @@
-#compdef deploya
+#compdef tacoma
 #autoload
 
 local -a tacoma_env
