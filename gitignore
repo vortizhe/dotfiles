@@ -9,3 +9,5 @@
 *.sublime*
 restart.txt
 .rake_tasks
+*/config/database.yml
+*/config/secrets.yml
