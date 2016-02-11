@@ -5,7 +5,7 @@
   ui = auto
 [core]
   excludesfile = <%= ENV['HOME'] %>/.gitignore
-  editor = subl -w
+  editor = vim
 [apply]
   whitespace = nowarn
 [branch]
@@ -23,6 +23,8 @@
   helper = osxkeychain
 [help]
   autocorrect = 1
+[push]
+  default = simple
 [alias]
   ignore = update-index --assume-unchanged
   unignore = update-index --no-assume-unchanged

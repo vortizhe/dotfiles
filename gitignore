@@ -1,11 +1,30 @@
+# OSX and Win folder shit
 .DS_Store
+Desktop.ini
+._*
+Thumbs.db
+.Spotlight-V100
+.Trashes
+
+# Project related
 .svn
 .rvmrc
 *~
 \#*#
 .powrc
-.jshintrc
 */environments/development.rb
 *.sublime*
 restart.txt
 .rake_tasks
+*/config/database.yml
+*/config/secrets.yml
+.sass-cache
+
+# working files
+vim/viminfo
+vim/swaps/*
+vim/undo
+vim/backups/*
+
+# git credential file
+ .gitconfig.localo

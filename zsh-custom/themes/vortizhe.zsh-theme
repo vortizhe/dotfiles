@@ -12,17 +12,13 @@ function toon {
 local rvm=''
 if [[ ! -a $(~/.rvm/bin/rvm-prompt) ]]; then
   rvm='‹%{$fg[magenta]%}$(~/.rvm/bin/rvm-prompt v g)%{$reset_color%}›'
-else
-  rvm=''
 fi
 local return_code='%(?..%{$fg[red]%}%? ↵%{$reset_color%})'
 
-
-if [[ -x `which tacoma` ]]; then
-  tacoma='‹%{$fg[yellow]%}$(/usr/bin/env tacoma current )%{$reset_color%}›'
-else
-  tacoma=''
-fi
+local tacoma=''
+# if [[ -r ~/.tacoma.yml ]]; then
+#   tacoma='‹%{$fg[yellow]%}$(/usr/bin/env tacoma current )%{$reset_color%}›'
+# fi
 
 git_prompt='%{$fg[blue]%}%~%{$reset_color%} $(git_prompt_info)$(git_prompt_status)%{$reset_color%}'
 
@@ -42,4 +38,3 @@ ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%} ✭"
 PROMPT="$git_prompt
 $(toon) "
 RPROMPT="$tacoma$rvm"
-
