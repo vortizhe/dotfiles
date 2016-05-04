@@ -5,7 +5,7 @@ ZSH_THEME="vortizhe"
 DISABLE_AUTO_UPDATE="true"
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(git rails brew gem osx rvm bundler cap powder rake rake-fast sublime heroku capistrano common-aliases zsh_reload tacoma c deploya zsh-syntax-highlighting ssh-agent)
+plugins=(git rails brew gem osx bundler cap powder rake rake-fast sublime heroku capistrano common-aliases zsh_reload tacoma c deploya zsh-syntax-highlighting ssh-agent asdf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -32,4 +32,4 @@ alias showhidden="defaults write com.apple.finder AppleShowAllFiles -boolean tru
 alias hidehidden="defaults write com.apple.finder AppleShowAllFiles -boolean false && killall Finder"
 alias updatedb="sudo /usr/libexec/locate.updatedb"
 
-PATH="~/bin:~/.rvm/bin:/usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/usr/local/sbin:$PATH"
+PATH="~/bin:usr/local/bin:/usr/local/sbin:/usr/local/heroku/bin:/usr/local/sbin:$PATH"
