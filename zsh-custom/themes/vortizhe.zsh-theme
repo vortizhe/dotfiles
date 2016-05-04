@@ -9,11 +9,7 @@
 function toon {
   echo -n ""
 }
-local rvm=''
-if [[ ! -a $(~/.rvm/bin/rvm-prompt) ]]; then
-  rvm='‹%{$fg[magenta]%}$(~/.rvm/bin/rvm-prompt v g)%{$reset_color%}›'
-fi
-local return_code='%(?..%{$fg[red]%}%? ↵%{$reset_color%})'
+env_versions='%{$fg[red]%}♢ $(asdf local ruby) %{$fg[green]%}⬡ $(asdf local nodejs)%{$reset_color%}'
 
 local tacoma=''
 # if [[ -r ~/.tacoma.yml ]]; then
@@ -37,4 +33,4 @@ ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%} ✭"
 
 PROMPT="$git_prompt
 $(toon) "
-RPROMPT="$tacoma$rvm"
+RPROMPT="$tacoma $env_versions"
