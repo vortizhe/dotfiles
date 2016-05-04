@@ -6,9 +6,6 @@
 #       VERSION:  1.0.0
 #    SCREENSHOT:
 # ------------------------------------------------------------------------------
-function toon {
-  echo -n ""
-}
 env_versions='%{$fg[red]%}♢ $(asdf local ruby) %{$fg[green]%}⬡ $(asdf local nodejs)%{$reset_color%}'
 
 local tacoma=''
@@ -19,18 +16,18 @@ local tacoma=''
 git_prompt='%{$fg[blue]%}%~%{$reset_color%} $(git_prompt_info)$(git_prompt_status)%{$reset_color%}'
 
 
-ZSH_THEME_GIT_PROMPT_PREFIX="[%{$fg[red]%}"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}]"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[red]%} "
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY=""
 ZSH_THEME_GIT_PROMPT_CLEAN=""
-ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[green]% ✚"
-ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg[blue]%} ✹"
-ZSH_THEME_GIT_PROMPT_DELETED="%{$fg[red]%} ✖"
-ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[magenta]%} ➜"
-ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[yellow]%} ═"
-ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%} ✭"
+ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[green]% ✚ "
+ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg[blue]%} ✹ "
+ZSH_THEME_GIT_PROMPT_DELETED="%{$fg[red]%} ✖ "
+ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[magenta]%} ➜ "
+ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[yellow]%} ═ "
+ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%}✭ "
 
 
 PROMPT="$git_prompt
-$(toon) "
+ "
 RPROMPT="$tacoma $env_versions"
