@@ -19,6 +19,7 @@ restart.txt
 */config/database.yml
 */config/secrets.yml
 .sass-cache
+.tool-versions
 
 # working files
 vim/viminfo
