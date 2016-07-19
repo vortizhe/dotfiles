@@ -10,7 +10,7 @@ env_versions='%{$fg[red]%}♢ $(asdf local ruby) %{$fg[green]%}⬡ $(asdf local 
 
 local tacoma=''
 if [[ -r ~/.tacoma.yml ]]; then
-  tacoma="‹%{$fg[yellow]%}$(/usr/bin/env tacoma current)%{$reset_color%}›"
+  tacoma='‹%{$fg[yellow]%}$(/usr/bin/env tacoma current)%{$reset_color%}›'
 fi
 
 git_prompt='%{$fg[blue]%}%~%{$reset_color%} $(git_prompt_info)$(git_prompt_status)%{$reset_color%}'
