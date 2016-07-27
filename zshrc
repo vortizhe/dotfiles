@@ -14,6 +14,7 @@ source ~/.localrc
 
 # git
 alias gP='git push origin $(current_branch)'
+alias gL='git reset origin/$(current_branch) --hard'
 alias gsmu="git submodule update --init"
 alias gm='git merge --no-ff'
 
