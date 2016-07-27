@@ -1,0 +1,39 @@
+#compdef tacoma
+#
+# Tacoma autocompletion for zsh
+# Requires: Tacoma gem installed
+# Author: Victor Ortiz (@vortizhe)
+
+
+__tacoma_environments() {
+  declare -a t_env
+  t_env=(`tacoma list`)
+  _describe 'environments' t_env
+}
+
+local -a _1st_arguments
+_1st_arguments=(
+  "cd":"Change directory to the project path"
+  "current":"Displays current loaded tacoma environment"
+  "help":"Describe available commands or one specific command"
+  "install":"Create a sample ~/.tacoma.yml file"
+  "list":"Lists all known AWS environments"
+  "switch":"Prepares AWS config files for the providers. --with-exports will outpu..."
+  "version":"Displays current tacoma version"
+)
+
+_arguments '*:: :->command'
+
+if (( CURRENT == 1 )); then
+  _describe -t commands "tacoma command" _1st_arguments
+  return
+fi
+
+local -a _command_args
+case "$words[1]" in
+  cd|switch)
+  _arguments \
+    '(-h,--help=)'{-h,--help=}'[Describe available commands or one specific command]'
+    __tacoma_environments ;;
+
+esac

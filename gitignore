@@ -18,8 +18,10 @@ restart.txt
 .rake_tasks
 */config/database.yml
 */config/secrets.yml
+*.log
 .sass-cache
 .tool-versions
+node_modules/*
 
 # working files
 vim/viminfo
