@@ -7,27 +7,27 @@ Thumbs.db
 .Trashes
 
 # Project related
-.svn
 .rvmrc
 *~
 \#*#
 .powrc
-*/environments/development.rb
 *.sublime*
 restart.txt
 .rake_tasks
+*/environments/development.rb
 */config/database.yml
 */config/secrets.yml
 *.log
 .sass-cache
 .tool-versions
 node_modules/*
+_site
 
-# working files
+# VIM working files
 vim/viminfo
 vim/swaps/*
 vim/undo
 vim/backups/*
 
 # git credential file
- .gitconfig.localo
+ .gitconfig.local
