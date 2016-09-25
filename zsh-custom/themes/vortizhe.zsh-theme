@@ -17,14 +17,23 @@ else
   TACOMA_PROMPT=''
 fi
 
+asdf_version() {
+  local _version
+  _version="$(asdf local $1 |grep -ic 'not set')"
+  if [[ $_version -eq 1 ]]; then
+      echo "$(asdf global $1)"
+  else
+      echo "$(asdf local $1)"
+  fi
+}
+
 if [ $+commands[asdf] ]; then
-  ASDF_PROMPT='%{$fg[red]%}♢ $(asdf local ruby) %{$fg[green]%}⬡ $(asdf local nodejs)%{$reset_color%}'
+  ASDF_PROMPT='%{$fg[red]%}♢ $(asdf_version ruby) %{$fg[green]%}⬡ $(asdf_version nodejs)%{$reset_color%}'
 else
   ASDF_PROMPT=''
 fi
 
 git_prompt='%{$fg[blue]%}%~%{$reset_color%} $(git_prompt_info)$(git_prompt_status)%{$reset_color%}'
-
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[red]%} "
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
