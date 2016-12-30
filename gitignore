@@ -12,6 +12,7 @@ Thumbs.db
 \#*#
 .powrc
 *.sublime*
+*.vscode/*
 restart.txt
 .rake_tasks
 */environments/development.rb
