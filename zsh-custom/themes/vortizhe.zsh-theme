@@ -19,11 +19,11 @@ fi
 
 asdf_version() {
   local _version
-  _version="$(asdf local $1 |grep -ic 'not set')"
+  _version="$(asdf current $1 | grep -ic 'No such plugin')"
   if [[ $_version -eq 1 ]]; then
-      echo "$(asdf global $1)"
+      echo "not set"
   else
-      echo "$(asdf local $1)"
+      echo "$(asdf current $1 | grep -oe '\d.\d.\d')"
   fi
 }
 
