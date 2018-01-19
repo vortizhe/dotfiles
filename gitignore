@@ -21,8 +21,11 @@ restart.txt
 *.log
 .sass-cache
 .tool-versions
-node_modules/*
+*/node_modules/*
 _site
+*.local
+jsconfig.json
+.mix_tasks
 
 # VIM working files
 vim/viminfo
