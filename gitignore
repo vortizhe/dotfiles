@@ -12,7 +12,8 @@ Thumbs.db
 \#*#
 .powrc
 *.sublime*
-*.vscode/*
+*.vscode*
+.elixir_ls/*
 restart.txt
 .rake_tasks
 */environments/development.rb
@@ -20,7 +21,6 @@ restart.txt
 */config/secrets.yml
 *.log
 .sass-cache
-.tool-versions
 */node_modules/*
 _site
 *.local
@@ -34,4 +34,4 @@ vim/undo
 vim/backups/*
 
 # git credential file
- .gitconfig.local
+.gitconfig.local
