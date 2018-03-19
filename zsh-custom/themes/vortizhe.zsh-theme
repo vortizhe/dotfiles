@@ -48,5 +48,5 @@ ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%} ✭"
 
 
 PROMPT="$git_prompt
- "
+%{$fg[yellow]%}λ %{$reset_color%}"
 RPROMPT="$TACOMA_PROMPT $ASDF_PROMPT"
