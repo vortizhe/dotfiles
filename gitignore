@@ -16,6 +16,7 @@ Thumbs.db
 .elixir_ls/*
 restart.txt
 .rake_tasks
+.mix_tasks
 */environments/development.rb
 */config/database.yml
 */config/secrets.yml
@@ -26,6 +27,8 @@ _site
 *.local
 jsconfig.json
 .mix_tasks
+Procfile.local
+.elixir_ls/*
 
 # VIM working files
 vim/viminfo
@@ -35,3 +38,8 @@ vim/backups/*
 
 # git credential file
 .gitconfig.local
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
