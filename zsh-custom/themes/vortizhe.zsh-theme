@@ -18,17 +18,15 @@ else
 fi
 
 asdf_version() {
-  local _version
-  _version="$(asdf current $1 | grep -ic 'No such plugin')"
-  if [[ $_version -eq 1 ]]; then
-      echo "not set"
+  if [[ -f .tool-versions ]]; then
+    echo "$((cat .tool-versions | grep $1 || cat ~/.tool-versions | grep $1) | awk -F' ' '{print $2}')"
   else
-      echo "$(asdf current $1 | grep -oe '\d.\d.\d')"
+    echo "$(cat ~/.tool-versions | grep $1 | awk -F' ' '{print $2}')"
   fi
 }
 
 if [ $+commands[asdf] ]; then
-  ASDF_PROMPT='%{$fg[red]%}♢ $(asdf_version ruby) %{$fg[green]%}⬡ $(asdf_version nodejs)%{$reset_color%}'
+  ASDF_PROMPT='%{$fg[red]%}♢$(asdf_version ruby) %{$fg[green]%}⬡ $(asdf_version nodejs)%{$reset_color%}'
 else
   ASDF_PROMPT=''
 fi
